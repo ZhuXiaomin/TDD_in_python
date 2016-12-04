@@ -10,6 +10,18 @@ install:
   - pip install coverage
   - pip install coveralls
 # command to run tests
-script: nosetests -v test/test_calculator.py --with-coverage
+script: nosetests -v test/test_calculator.py --with-coverage --cover-package=app
+
 after_success:
   coveralls
+
+notifications:
+  email:
+    recipients:
+      - zamnickzhu@163.com
+    on_success: [always] # default: change
+    on_failure: [always] # default: always
+
+branches:
+  only:
+    - master
