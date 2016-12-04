@@ -9,4 +9,4 @@ install:
   - pip install nose
   - pip install coverage 
 # command to run tests
-script: nosetests -v test/test-calculator.py --with-coverage
+script: nosetests -v test/test_calculator.py --with-coverage
