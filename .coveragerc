@@ -1,3 +1,6 @@
+[run]
+source = app
+
 [report]
 omit =
     */python?.?/*
